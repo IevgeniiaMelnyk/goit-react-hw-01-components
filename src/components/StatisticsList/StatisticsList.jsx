@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import scss from './StatisticsList.module.scss';
 import Statistics from '../Statistics/Statistics';
+import { getRandomHexColor } from 'utils';
 
 const StatisticsList = ({ title, stats }) => {
   return (
@@ -37,7 +38,3 @@ StatisticsList.propTypes = {
 StatisticsList.defaultProps = {
   stats: [],
 };
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
